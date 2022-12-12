@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh Lpr lFf" class="bg-grey-3">
+  <q-layout view="hHh Lpr lFf" class="body--dark">
     <q-header class="shadow-4">
       <q-toolbar class="row justify-between">
         <q-btn flat dense round @click="drawerOpen = !drawerOpen" icon="menu" aria-label="Menu" />
