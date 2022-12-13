@@ -153,6 +153,16 @@ export default {
           sort: 'desc'
         },
         {
+          label: '按照添加日期旧到新',
+          order: 'f_id',
+          sort: "asc"
+        },
+        {
+          label: '按照添加日期新到旧',
+          order: 'f_id',
+          sort: "desc"
+        },
+        {
           label: '按照价格便宜到贵的顺序',
           order: 'price',
           sort: 'asc'
