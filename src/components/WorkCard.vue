@@ -21,6 +21,10 @@
         </router-link>
       </div>
 
+      <div class="q-ml-sm q-mt-sm q-mb-xs text-subtitle1 text-weight-regular ellipsis">
+          {{ metadata.dir }}
+      </div>
+
       <!-- 评价&评论 -->
       <div v-show="metadata.title" class="row items-center">
         <!-- 评价 -->

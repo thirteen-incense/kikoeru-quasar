@@ -127,9 +127,9 @@ export default {
       pagination: { currentPage:0, pageSize:12, totalCount:0 },
       seed: 7, // random sort
       sortOption: {
-        label: '按照发售日期新到老的顺序',
-        order: 'release',
-        sort: 'desc'
+          label: '按照添加日期新到旧',
+          order: 'f_id',
+          sort: 'desc'
       },
       options: [
         {
@@ -155,12 +155,12 @@ export default {
         {
           label: '按照添加日期旧到新',
           order: 'f_id',
-          sort: "asc"
+          sort: 'asc'
         },
         {
           label: '按照添加日期新到旧',
           order: 'f_id',
-          sort: "desc"
+          sort: 'desc'
         },
         {
           label: '按照价格便宜到贵的顺序',

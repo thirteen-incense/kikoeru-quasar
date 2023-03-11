@@ -56,6 +56,10 @@
               <q-item clickable @click="download(item)">
                 <q-item-section>下载文件</q-item-section>
               </q-item>
+
+              <q-item clickable @click="gotoPotPlayer(item)" v-if="item.type === 'audio'">
+                <q-item-section>PotPlayer播放</q-item-section>
+              </q-item>
             </q-list>
           </q-menu>
         </q-item>
@@ -193,6 +197,15 @@ export default {
       const url = file.mediaStreamUrl ? `${file.mediaStreamUrl}?token=${token}` : `/api/media/stream/${file.hash}?token=${token}`;
       const link = document.createElement('a');
       link.href = url;
+      link.target="_blank";
+      link.click();
+    },
+
+    gotoPotPlayer (file) {
+      const token = this.$q.localStorage.getItem('jwt-token') || '';
+      const url = file.mediaStreamUrl ? `${file.mediaStreamUrl}?token=${token}` : `/api/media/stream/${file.hash}?token=${token}`;
+      const link = document.createElement('a');
+      link.href = `potplayer://${url}`;
       link.target="_blank";
       link.click();
     }
