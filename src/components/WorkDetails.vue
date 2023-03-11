@@ -21,7 +21,7 @@
         </div>
 
         <div class="text-subtitle1 text-weight-regular">
-          <router-link :to="`/works?circleId=${metadata.id}`" class="text-grey">
+          <router-link :to="`/work/${metadata.id}`" class="text-grey">
             {{metadata.dir}}
           </router-link>
         </div>
