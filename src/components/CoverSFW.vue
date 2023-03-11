@@ -56,7 +56,16 @@ export default {
     },
 
     rjcode () {
-      return (`000000${this.workid}`).slice(-6)
+      // return (`000000${this.workid}`).slice(-6)
+
+      let rjcode ;
+      if (id>=1000000) {
+        rjcode = (`00000000${this.workid}`).slice(-8);
+      } else {
+        rjcode = (`000000${this.workid}`).slice(-6);
+      }
+
+      return rjcode
     },
 
     imgClass () {
