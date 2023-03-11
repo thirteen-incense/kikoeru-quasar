@@ -20,6 +20,12 @@
           </router-link>
         </div>
 
+        <div class="text-subtitle1 text-weight-regular">
+          <router-link :to="`/works?circleId=${metadata.id}`" class="text-grey">
+            {{metadata.dir}}
+          </router-link>
+        </div>
+
         <!-- 评价&评论 -->
         <div class="row items-center q-gutter-xs">
           <!-- 评价 -->

@@ -205,7 +205,7 @@ export default {
       const token = this.$q.localStorage.getItem('jwt-token') || '';
       const url = file.mediaStreamUrl ? `${file.mediaStreamUrl}?token=${token}` : `/api/media/stream/${file.hash}?token=${token}`;
       const link = document.createElement('a');
-      link.href = `potplayer://${url}`;
+      link.href = `potplayer://192.168.8.2:8888/${url}`;
       link.target="_blank";
       link.click();
     }
